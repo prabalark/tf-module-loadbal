@@ -31,6 +31,8 @@ resource "aws_lb" "main" {
   tags               = merge(var.tags, { Name = "${var.name}-alb-${var.env}" })
 }
 
+ # take arn & search in google ,
+  # if no config we will get below 403 error
 resource "aws_lb_listener" "main" {
   load_balancer_arn = aws_lb.main.arn
   port              = "80"
