@@ -24,7 +24,7 @@ resource "aws_security_group" "sg" {
 
 resource "aws_lb" "main" {
   name               = "${var.name}-alb-${var.env}"
-  internal           = var.internal
+  internal           = var.internal  # same flase we are giving in variable
   load_balancer_type = "application"
   security_groups    = [aws_security_group.sg.id]
   subnets            = var.subnets
