@@ -30,3 +30,4 @@ resource "aws_lb" "main" {
   subnets            = var.subnets
   tags               = merge(var.tags, { Name = "${var.name}-alb-${var.env}" })
 }
+
