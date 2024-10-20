@@ -3,5 +3,5 @@
 #}
 
 output "listener_arn" {
-  value = aws_lb_listener_rule.rule.arn
+  value = aws_lb_listener.main.arn
 }
