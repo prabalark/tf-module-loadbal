@@ -8,3 +8,4 @@ variable "internal" {}
 variable "subnets" {}
 
 variable "tags" {}
+
